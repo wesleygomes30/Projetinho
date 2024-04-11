@@ -3,17 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gomes Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Incluindo jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+ <title>Gomes Bank</title> 
+    <style>
+    body{ 
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, Navy, orange,black);
+}
+
+div{
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+
+}
+button{
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+    </style>
 </head>
 <body>
-   <H1>Gomes Bank</H1> 
-   <Form>
-    <label for="email">email</label>
-    <input type="text" name="email" id=""> <br> <br> 
-    <label for="senha">senha</label> 
-    <input type="password" name="senha" id=""> 
-    <button type="submit">Entrar</button>
-   </Form>
-   <a href="Cadastro.HTML">Cadastrar Usuario</a>
+    <div>
+    <h1 class="teste">Gomes Bank S.A</h1>
+       <h2>Login</h2>
+       <label for="text" name="cpf"label>
+       <input type="text" placeholder="CPF" required maxlength="11" id="cpf"> <br> <br>
+       <label for="text" name="Senha"label>
+       <input type="password" placeholder="Senha" required maxlength="6" id="Senha"> <br> <br>
+       <button class="botaoacessar" type="submit">Acessar</button> <br> <br>
+       <a href="Cadastro.HTML">Não sou cliente</a>
+    </div>
 </body>
 </html>
+<script>$(document).ready(function(){
+    $('#cpf').mask('000.000.000-00'); // Aplica a máscara para CPF
+  });</script>
